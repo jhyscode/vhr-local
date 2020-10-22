@@ -1,4 +1,5 @@
 <template>
+  <body id="poster">
   <el-form :model="loginForm" :rules="rules" ref="loginFormRef" class="login-container" label-position="left"
            label-width="0px" v-loading="loading">
     <h3 class="login_title">Fox综合人事管理系统登录</h3>
@@ -15,6 +16,7 @@
       <el-button type="primary" style="width:48%;" @click.native.prevent="submitClick" :loading="logining">登 录</el-button>
     </el-form-item>
   </el-form>
+  </body>
 </template>
 <script>
   export default{
@@ -56,6 +58,17 @@
   }
 </script>
 <style>
+  #poster {
+    background:url("../assets/background.jpg") no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+  }
+  body{
+    margin: 0px;
+  }
   .login-container {
     border-radius: 15px;
     background-clip: padding-box;

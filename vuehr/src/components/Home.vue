@@ -48,6 +48,9 @@
               <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
               <el-breadcrumb-item v-text="this.$router.currentRoute.name"></el-breadcrumb-item>
             </el-breadcrumb>
+            <div class="homeWelcome" v-if="this.$router.currentRoute.path=='/home'">
+              欢迎来到微人事！
+            </div>
             <keep-alive>
               <router-view v-if="this.$route.meta.keepAlive"></router-view>
             </keep-alive>
@@ -129,6 +132,13 @@
   }
 </script>
 <style>
+  .homeWelcome {
+    text-align: center;
+    font-size: 30px;
+    font-family: 华文行楷;
+    color: #409eff;
+    padding-top: 50px;
+  }
   .home-container {
     height: 100%;
     position: absolute;
